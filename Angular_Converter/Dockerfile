@@ -12,4 +12,4 @@ RUN npm run build
 FROM nginx:alpine
 
 COPY src/nginx/etc/conf.d/default.conf /etc/nginx/conf/default.conf
-COPY --from=builder /app/dist/Angular_Converter /usr/share/nginx/html/
+COPY --from=builder /dist/angular_converter /usr/share/nginx/html/
